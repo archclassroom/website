@@ -1,0 +1,67 @@
+/* Global Styles */
+body {
+  color: #222;
+  font-family: "Open Sans", "Fira Sans", "Verdana", "Source Sans Pro", "Dejavu Sans", "Droid Sans", "Helvetica", "Arial", sans-serif;
+}
+a:link, a:visited {
+  color: #08c;
+  text-decoration: none;
+}
+a:active, a:hover {
+  color: #666;
+  text-decoration: underline;
+}
+section {
+  padding: .5em;
+  margin-bottom: 1em;
+}
+.infobox {
+  background: #ecf2f5;
+  border: 1px solid #bcd;
+}
+/* Site Header */
+header.main {
+  color: #999;
+  background: #333;
+  border-bottom: 5px #08c solid;
+}
+header.main h1, nav, nav ul, nav li {
+  display: inline;
+}
+/* Content */
+#content, #sidebar {
+  float: left;
+  margin: 1em;
+}
+#content {
+  width: 80%;
+}
+/* Footer */
+footer.main {
+  text-align: center;
+  display: block;
+  clear: both;
+}
+/* github ribbon */
+.ribbon {
+  position: fixed;
+  padding: 5px 45px;
+  bottom: 50px;
+  right: -50px;
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  transform: rotate(315deg);
+  box-shadow: 0 0 0 3px #333333, 0 0 20px -3px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 0 #ffffff, 0 0 5px rgba(0, 0, 0, 0.3);
+  background-color: #333333;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-size: 13px;
+  font-family: sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px dashed #ffffff;
+  -webkit-backface-visibility: hidden;
+  letter-spacing: .5px;
+}

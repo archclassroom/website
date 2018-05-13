@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}index{% endblock %}
+{% block content %}
+{% for article in articles_page.object_list %}
+  <article class="post" role="article">
+    <header>
+      <h2>{{ article.title }}</h2>
+      <time datetime="{{ date }}">{{ article.locale_date }}</time>
+    </header>
+    <p>
+      {{ article.summary }}
+    </p>
+    <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">
+      Read more
+    </a>
+  </article>
+{% endfor %}
+<nav class="pagination">
+{% if articles_page.has_previous() %}
+  {% if articles_page.previous_page_number() == 1 %}
+  <a href="{{ SITEURL }}/{{ page_name }}.html">« Previous&nbsp;</a>
+  {% else %}
+  <a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.previous_page_number() }}.html">« Previous&nbsp;</a>
+  {% endif %}
+{% endif %}
+Page {{ articles_page.number }} / {{ articles_paginator.num_pages }}
+{% if articles_page.has_next() %}
+  <a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html">&nbsp;Next »</a>
+{% endif %}
+</nav>
+{% endblock content %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}{{ article.title }}{% endblock %}
+{% block head %}
+  <meta name="category" content="{{ article.category|striptags }}">
+  {% if article.author %}
+  <meta name="author" content="{{ article.author }}">
+  <meta name="copyright" content="{{ article.author }}">
+  {% endif %}
+  <meta name="date" content="{{ article.date }}">
+{% endblock head %}
+{% block content %}
+<article role="main">
+  <header>
+    <h1>
+      {{ article.title }}
+    </h1>
+    {% if article.date %}
+      <h3>posted on {{ article.date }}</h3>
+    {% endif %}
+  </header>
+  {{ article.content }}
+</article>
+{% endblock %}

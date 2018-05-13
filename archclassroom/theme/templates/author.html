@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}articles by {{ author }}{% endblock title %}
+{% block content %}
+<article role="main">
+  <h2>{{ author }} - {{ articles|count }} articles posted<h2>
+</article>
+{% endblock %}
